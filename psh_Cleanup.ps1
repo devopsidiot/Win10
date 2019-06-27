@@ -132,11 +132,10 @@ Pin-App "Photos" -unpin
 Pin-App "Cortana" -unpin
 Pin-App "Microsoft Store" -unpin
 Pin-App "Calculator" -unpin
-Pin-App "Remote Desktop" -unpin
 Pin-App "Outlook"
 Pin-App "Word"
 Pin-App "Excel"
-Pin-App "Box Sync"
+Pin-App "Box Drive"
 Pin-App "Google Chrome"
 
 #Sets Screen Saver Timeout to 5 minutes
