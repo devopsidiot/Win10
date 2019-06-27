@@ -13,30 +13,8 @@ powershell -command "& { iwr https://awagent.com/Home/DownloadWinPcAgentApplicat
 Start-Sleep 30
 
 Write-Host "Enrolls Laptop in Airwatch"
-Start-Process "C:\Windows\Temp\AirWatchAgent.msi"
+Start-Process -ArgumentList '/i C:\Windows\Temp\AirWatchAgent.msi /qn'
 
-<#[void][reflection.assembly]::LoadWithPartialName("System.Windows.Forms")
-[void][reflection.assembly]::LoadWithPartialName("System.Drawing")
-
-$file = (get-item 'C:\Windows\System32\FeatureToastHeroImg.jpg')
-
-$img = [System.Drawing.Image]::Fromfile($file);
-
-[System.Windows.Forms.Application]::EnableVisualStyles();
-$form = new-object Windows.Forms.Form
-$form.Text = "Image Viewer"
-$form.Width = $img.Size.Width;
-$form.Height =  $img.Size.Height;
-$pictureBox = new-object Windows.Forms.PictureBox
-$pictureBox.Width =  $img.Size.Width;
-$pictureBox.Height =  $img.Size.Height;
-
-$pictureBox.Image = $img;
-$form.controls.add($pictureBox)
-$form.Add_Shown( { $form.Activate() } )
-$form.ShowDialog()
-#$form.Show();
-#>
 
 Start-Sleep 3600
 
