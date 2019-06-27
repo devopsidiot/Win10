@@ -17,7 +17,7 @@ Set-ExecutionPolicy RemoteSigned
 Start-Sleep 15
 #Broomfield Printers 
 Write-Host "Downloads Broomfield Printer"
-powershell -command "& { iwr http://download.support.xerox.com/pub/drivers/WC780X/drivers/win10/ar/WC78XX_5.523.0.0_PrintSetup.exe -OutFile C:\Windows\Temp\PrinterDriver.exe }"
+Invoke-WebRequest -uri "http://download.support.xerox.com/pub/drivers/WC780X/drivers/win10/ar/WC78XX_5.523.0.0_PrintSetup.exe" -OutFile "C:\Windows\Temp\PrinterDriver.exe"
 Start-Process C:\Windows\Temp\PrinterDriver.EXE 
 Start-Sleep 300
 
